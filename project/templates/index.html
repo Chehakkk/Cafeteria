@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Cafeteria</title>
 </head>
 
-<body>
+<body style="background-color: black;">cd 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -20,9 +21,9 @@
                 <nav class="mainnav shadow navbar-expand-lg navbar navbar-dark bg-dark fixed-top"
                     style="min-width: 350px">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
-                            <i class="bi bi-soundwave"></i> Cafeteria
-                            <div style="font-size: 13px">Hello Foodie !</div>
+                        <a class="navbar-brand text-white" href="#">
+                            <i class="bi bi-soundwave text-white"></i> Cafeteria
+                            <div style="font-size: 13px " class="text-white">Hello Foodie !</div>
                         </a>
 
                         <div>
@@ -44,20 +45,20 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                                    <a class="nav-link active  text-light" aria-current="page" href="/">Home</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/new">New</a>
+                                    <a class="nav-link text-light"  href="/new">New</a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/viewwish"><span><i
+                                <li class="nav-item ">
+                                    <a class="nav-link text-light" href="/viewwish"><span><i
                                                 class="bi bi-bookmark-heart"></i></span></a>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         Place
                                     </a>
@@ -75,7 +76,7 @@
 
                                 <!-- <img class="rounded-circle" src="{% static 'images/14.jpg' %}" style="width:40px;height:40px"> -->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
+                                    <a class="nav-link dropdown-toggle text-light" href="" id="navbarDropdown" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         <span>
                                             <i class="bi bi-person-circle"></i>
@@ -135,8 +136,8 @@
             </div>
             <div class="col-md-10 mb-6 mt-5  p-0">
                 <div class="card text-bg-dark">
-                    <img class="object-fit-scale border " src="{% static 'images/profile.jpeg'%}" class="card-img"
-                        alt="..." style="height: auto;width: 100%;">
+                    <img class="object-fit-scale border img- fluid " src="{% static 'images/profile.jpeg'%}" class="card-img"
+                        alt="..." style="height: 50% ;width: 100%;">
                     <div class="card-img-overlay">
                         <h5 class="card-title text-light mt-4">The Theobroma</h5>
                         <p class="card-text text-light">Indulging in a cupcake paradise!</p>
@@ -146,15 +147,15 @@
             </div>
         </div>
         <div class="row">
-            <h5 class="cafe-category-title mx-5 pt-4 text-light">New Places To Explore : <small class="float-end"></h5>
+            <h5 class="cafe-category-title mx-5 pt-4 text-light" style="background-color: #2cc8e5; background: linear-gradient(90deg, rgba(24,49,82,0) 0%, rgba(44,200,229,1) 44%, rgba(0,212,255,0) 100%); height: 50%; display: block; margin-top: 15px; width: 80%;">New Places To Explore : <small class="float-end"></h5>
 
             <div class="col-md-12 mt-4">
                 <div class="row">
                     {% for i in Cafes %}
                     <div class="col-md-3">
-                        <div class="card  bg-dark mt-4 mb-2 p-3" style="width: 100%; height: 90%;">
+                        <div class="card  bg-dark mt-4 mb-2 p-3" style="width: 100%; height: 90%;" data-aos="zoom-out"  data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-mirror="true">
                             <img src="{{i.image.url}}" class="card-img-top" alt="...">
-                            <div class="card-body">
+                            <div class="card-body" >
                                 <h5 class="card-title text-light"> {{i.name}}</h5>
                                 <p class="card-text text-light"> {{i.detail}}</p>
                                 <p class="card-text text-light"> Rating : {{i.rating}}</p>
@@ -177,14 +178,14 @@
             </div>
         </div>
         <div class="row">
-            <h3 class="cafe-category-title mx-5 pt-4 text-light">Places For Jain : <small class="float-end"></h3>
+            <h3 class="cafe-category-title mx-5 pt-4 text-light" style="background-color: #2cc8e5; background: linear-gradient(90deg, rgba(24,49,82,0) 0%, rgba(44,200,229,1) 44%, rgba(0,212,255,0) 100%); height: 100%; display: block; margin-top: 15px; width: 80%;">Places For Jain : <small class="float-end"></h3>
 
             <div class="col-md-12">
                 <div class="row">
                     {% for j in Jain %}
 
                     <div class="col-md-3">
-                        <div class="card   bg-dark mt-5 p-3" style="width: 100%; height: 90%;" id="card">
+                        <div class="card   bg-dark mt-5 p-3" style="width: 100%; height: 90%;" id="card"  data-aos="zoom-in-down"  data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-mirror="true">
                             <img src="{{j.image.url}}" class="card-img-fluivisitord " alt="...">
                             <div class="card-body">
                                 <h5 class="card-title text-light"> {{j.name}}</h5>
@@ -211,13 +212,13 @@
             </div>
         </div>
         <div class="row">
-            <h4 class="cafe-category-title mx-5 pt-4 text-light strong">Based On Your Mood : <small class="float-end">
+            <h4 class="cafe-category-title mx-5 pt-4 text-light strong" style="background-color: #2cc8e5; background: linear-gradient(90deg, rgba(24,49,82,0) 0%, rgba(44,200,229,1) 44%, rgba(0,212,255,0) 100%); height: 70%; display: block; margin-top: 15px; width: 80%;">Based On Your Mood : <small class="float-end">
             </h4>
-            <div class="col-md-12">
+            <div class="col-md-12 py-5">
                 <div class="row">
                     <!-- <div class="dessert-card-start"> -->
                     <div class="col-md-4">
-                        <div class="card text-bg-dark">
+                        <div class="card text-bg-dark"  data-aos="zoom-out-down"  data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-mirror="true">
                             <img src="{% static 'images/dessert1.jpg' %}" class="card-img" alt="...">
                             <div class="card-img-overlay">
 
@@ -234,7 +235,7 @@
                     <!-- </div dessrt card endend > -->
 
                     <div class="col-md-4">
-                        <div class="card text-bg-dark">
+                        <div class="card text-bg-dark"  data-aos="zoom-out-down"  data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-mirror="true">
                             <img src="{% static 'images/chinese.jpg' %}" class="card-img" alt="...">
                             <div class="card-img-overlay">
                                 <h4 class="card-title text-light">Try Something New :</h4>
@@ -248,7 +249,7 @@
                     </div>
                     <!-- <div class="dessert-card-start"> -->
                     <div class="col-md-4">
-                        <div class="card text-bg-dark">
+                        <div class="card text-bg-dark"  data-aos="zoom-out-down"  data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-mirror="true">
                             <img src="{% static 'images/club.jpg' %}" class="card-img" alt="...">
                             <div class="card-img-overlay">
 
@@ -279,6 +280,11 @@
  <script src="{% static 'js/popper.min.js' %}"></script>
 
     // <script src="./assets/js/bootstrap.min.js"></script> 
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 
